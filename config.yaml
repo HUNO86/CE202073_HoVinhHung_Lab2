@@ -1,0 +1,36 @@
+camera:
+  source: "192.168.1.31:8080"
+  open_timeout_ms: 4000
+  read_timeout_ms: 4000
+  reconnect_delay: 1.0
+  stale_timeout: 2.5
+
+models:
+  cnn: weights/cnn.pt
+  transfer: weights/transfer.pt
+
+inference:
+  backend: onnx
+  conf_threshold: 0.40
+  smoothing_alpha: 0.5
+  num_threads: null
+
+detector:
+  type: yunet
+  yunet_path: weights/face_detection_yunet_2023mar.onnx
+  score_threshold: 0.7
+  nms_threshold: 0.3
+  detect_width: 640
+  detect_every: 2
+  min_face: 40
+  margin_yunet: 0.12
+  margin_haar: 0.0
+  align: true
+
+display:
+  window: "Emotion Recognition"
+  max_width: 1280
+  max_height: 900
+
+data:
+  path: data/fer2013.csv

@@ -1,0 +1,58 @@
+{
+  "kind": "transfer",
+  "arch": "resnet18",
+  "input_size": 112,
+  "channels": 3,
+  "mean": [
+    0.485,
+    0.456,
+    0.406
+  ],
+  "std": [
+    0.229,
+    0.224,
+    0.225
+  ],
+  "num_classes": 7,
+  "head_dropout": 0.3,
+  "classes": [
+    "Angry",
+    "Disgust",
+    "Fear",
+    "Happy",
+    "Sad",
+    "Surprise",
+    "Neutral"
+  ],
+  "base_size": 48,
+  "best_epoch": 28,
+  "val_acc": 0.7015881861242687,
+  "val_macro_f1": 0.6851074286966125,
+  "train_config": {
+    "epochs": 30,
+    "batch_size": 128,
+    "lr": 0.001,
+    "weight_decay": 0.01,
+    "label_smoothing": 0.1,
+    "class_weight_power": 0.5,
+    "pct_start": 0.1,
+    "freeze_epochs": 2,
+    "backbone_lr_mult": 0.3,
+    "patience": 10,
+    "amp": true,
+    "seed": 42,
+    "aug": {
+      "hflip": 0.5,
+      "rotate": 10,
+      "scale": 0.1,
+      "translate": 0.08,
+      "brightness": 0.2,
+      "contrast": 0.2,
+      "erase_p": 0.25,
+      "erase_area": [
+        0.02,
+        0.12
+      ]
+    }
+  }
+}

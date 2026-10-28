@@ -1,0 +1,3 @@
+Mô hình,Accuracy (test),Macro-F1 (test),Số tham số (M),Kích thước ONNX (MB),CPU PyTorch (ms),CPU ONNX (ms),FPS model-only (ONNX),Thời gian train (phút)
+M1 CNN tự thiết kế,0.7086,0.6947,4.82,18.4,8.2,4.97,201.1,12.5
+M2 ResNet18 (TL),0.713,0.7044,11.18,42.6,14.95,5.17,193.4,7.2

@@ -1,0 +1,59 @@
+{
+  "M1": {
+    "name": "M1 CNN",
+    "accuracy": 0.7085539147394817,
+    "macro_f1": 0.6946667998698486,
+    "per_class_f1": {
+      "Angry": 0.641925777331996,
+      "Disgust": 0.7321428571428571,
+      "Fear": 0.510593220338983,
+      "Happy": 0.9076396807297605,
+      "Sad": 0.5743589743589743,
+      "Surprise": 0.8028503562945368,
+      "Neutral": 0.6931567328918322
+    }
+  },
+  "M2": {
+    "name": "M2 ResNet18",
+    "accuracy": 0.7130119810532182,
+    "macro_f1": 0.7044105823829157,
+    "per_class_f1": {
+      "Angry": 0.6586345381526104,
+      "Disgust": 0.7522935779816514,
+      "Fear": 0.5456453305351522,
+      "Happy": 0.9029293509477312,
+      "Sad": 0.5561312607944733,
+      "Surprise": 0.8315665488810365,
+      "Neutral": 0.6836734693877551
+    }
+  },
+  "data": {
+    "train": 28697,
+    "val": 3589,
+    "test": 3589
+  },
+  "m3": [
+    {
+      "Mô hình": "M1 CNN tự thiết kế",
+      "Accuracy (test)": 0.7086,
+      "Macro-F1 (test)": 0.6947,
+      "Số tham số (M)": 4.82,
+      "Kích thước ONNX (MB)": 18.4,
+      "CPU PyTorch (ms)": 8.2,
+      "CPU ONNX (ms)": 4.97,
+      "FPS model-only (ONNX)": 201.1,
+      "Thời gian train (phút)": 12.5
+    },
+    {
+      "Mô hình": "M2 ResNet18 (TL)",
+      "Accuracy (test)": 0.713,
+      "Macro-F1 (test)": 0.7044,
+      "Số tham số (M)": 11.18,
+      "Kích thước ONNX (MB)": 42.6,
+      "CPU PyTorch (ms)": 14.95,
+      "CPU ONNX (ms)": 5.17,
+      "FPS model-only (ONNX)": 193.4,
+      "Thời gian train (phút)": 7.2
+    }
+  ]
+}

@@ -1,0 +1,54 @@
+{
+  "kind": "cnn",
+  "arch": "custom_cnn",
+  "input_size": 48,
+  "channels": 1,
+  "mean": [
+    0.507937293614038
+  ],
+  "std": [
+    0.2548683609592497
+  ],
+  "num_classes": 7,
+  "head_dropout": 0.5,
+  "classes": [
+    "Angry",
+    "Disgust",
+    "Fear",
+    "Happy",
+    "Sad",
+    "Surprise",
+    "Neutral"
+  ],
+  "base_size": 48,
+  "best_epoch": 60,
+  "val_acc": 0.6957369740874896,
+  "val_macro_f1": 0.6775348030817435,
+  "train_config": {
+    "epochs": 60,
+    "batch_size": 128,
+    "lr": 0.003,
+    "weight_decay": 0.05,
+    "label_smoothing": 0.1,
+    "class_weight_power": 0.5,
+    "pct_start": 0.15,
+    "freeze_epochs": 0,
+    "backbone_lr_mult": 1.0,
+    "patience": 15,
+    "amp": true,
+    "seed": 42,
+    "aug": {
+      "hflip": 0.5,
+      "rotate": 10,
+      "scale": 0.1,
+      "translate": 0.08,
+      "brightness": 0.2,
+      "contrast": 0.2,
+      "erase_p": 0.25,
+      "erase_area": [
+        0.02,
+        0.12
+      ]
+    }
+  }
+}
